@@ -1,0 +1,21 @@
+name: frostRenamer
+main: frostRenamer.FrostRenamer
+version: 1.1
+commands:
+  rename:
+    description: rename
+    usage: Use /Rename <Name>
+    permission: FrostRenamer.rename
+    permission-message: FrostRenamer - You don't have permission to use this command.   
+  describe:
+    description: describe
+    usage: Use /describe <description>
+    permission: FrostRenamer.describe
+    permission-message: FrostRenamer - You don't have permission to use this command.    
+permissions:
+    FrostRenamer.rename:
+        description: permission for player commands.
+        default: op
+    FrostRenamer.describe:
+        description: permission for player commands.
+        default: op        
