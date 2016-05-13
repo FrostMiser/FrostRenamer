@@ -67,7 +67,7 @@ public class FrostRenamer extends JavaPlugin {
 				playMenu(p);
 				return true;
 			}
-			ItemStack item = p.getItemInHand();
+			ItemStack item = p.getInventory().getItemInMainHand();
 			ItemMeta itemMeta = item.getItemMeta();
 			String message = args[0];
 			for (int i=1;i<args.length;i++)
@@ -77,7 +77,7 @@ public class FrostRenamer extends JavaPlugin {
 			message = ChatColor.translateAlternateColorCodes('&', message);
 			
 			itemMeta.setDisplayName(message);
-			p.getItemInHand().setItemMeta(itemMeta);
+			p.getInventory().getItemInMainHand().setItemMeta(itemMeta);
 			p.sendMessage(ChatColor.AQUA + "[FrostRenamer] " + ChatColor.GREEN + "Your Item has been renamed to:  " + message);
 			
 			return true;
@@ -88,7 +88,7 @@ public class FrostRenamer extends JavaPlugin {
 				return true;
 			}
 			
-			ItemStack item = p.getItemInHand();
+			ItemStack item = p.getInventory().getItemInMainHand();
 			ItemMeta itemMeta = item.getItemMeta();
 			String message = args[0];
 			
@@ -104,7 +104,7 @@ public class FrostRenamer extends JavaPlugin {
 
 			
 			item.setItemMeta(itemMeta);	
-			p.getItemInHand().setItemMeta(itemMeta);
+			p.getInventory().getItemInMainHand().setItemMeta(itemMeta);
 			
 			p.sendMessage(ChatColor.AQUA + "[FrostRenamer] " + ChatColor.GREEN + "Your Item description has been set to:  " + message);
 			return true;
