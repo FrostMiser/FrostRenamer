@@ -88,6 +88,17 @@ public class FrostRenamer extends JavaPlugin {
 				return true;
 			}
 			
+			//add to lore
+			if (args[0].EqualsIgnoreCase("add") {
+				
+			}
+			//clear lore
+			else if (args[0].EqualsIgnoreCase("clear") {
+			}
+			//set a specific lore line
+			else if (StringUtils.isNumeric(args[0])){
+			}
+			
 			ItemStack item = p.getInventory().getItemInMainHand();
 			ItemMeta itemMeta = item.getItemMeta();
 			String message = args[0];
