@@ -46,7 +46,7 @@ public class FrostRenamer extends JavaPlugin {
 		p.sendMessage(ChatColor.BLUE + "&c - Red");
 		p.sendMessage(ChatColor.BLUE + "&d - Light Purple");
 		p.sendMessage(ChatColor.BLUE + "&e- Yellow");
-		p.sendMessage(ChatColor.BLUE + "&f - White");				
+		p.sendMessage(ChatColor.BLUE + "&f - White");
 	}	
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) 
