@@ -83,7 +83,7 @@ public class FrostRenamer extends JavaPlugin {
 			return true;
 		}
 		else if (cmd.getName().equalsIgnoreCase("describe") ) {
-			if (args.length == 0) {
+			if (args.length < 1) {
 				playMenu(p);
 				return true;
 			}
@@ -101,9 +101,9 @@ public class FrostRenamer extends JavaPlugin {
 			
 			ItemStack item = p.getInventory().getItemInMainHand();
 			ItemMeta itemMeta = item.getItemMeta();
-			String message = args[0];
+			String message = args[1];
 			
-			for (int i=1;i<args.length;i++)
+			for (int i=2;i<args.length;i++)
 			{
 				message = message + " " + args[i]; 
 			}
