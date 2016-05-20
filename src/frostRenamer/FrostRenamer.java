@@ -59,7 +59,6 @@ public class FrostRenamer extends JavaPlugin {
 			e.printStackTrace();
 			return true;
 		}
-		
 
 		if (cmd.getName().equalsIgnoreCase("rename") ) 
 		{	
@@ -83,44 +82,54 @@ public class FrostRenamer extends JavaPlugin {
 			return true;
 		}
 		else if (cmd.getName().equalsIgnoreCase("describe") ) {
-			if (args.length < 1) {
+			if (args.length < 2) {
 				playMenu(p);
 				return true;
 			}
 			
-			//add to lore
-			if (args[0].EqualsIgnoreCase("add") {
-				
-			}
-			//clear lore
-			else if (args[0].EqualsIgnoreCase("clear") {
-			}
-			//set a specific lore line
-			else if (StringUtils.isNumeric(args[0])){
-			}
 			
-			ItemStack item = p.getInventory().getItemInMainHand();
-			ItemMeta itemMeta = item.getItemMeta();
+
 			String message = args[1];
-			
+
 			for (int i=2;i<args.length;i++)
 			{
 				message = message + " " + args[i]; 
 			}
-			
-			message = ChatColor.translateAlternateColorCodes('&', message);
-			List<String> itemLore = new ArrayList<String>();
-			itemLore.add(message);
-			itemMeta.setLore(itemLore);
 
+			message = ChatColor.translateAlternateColorCodes('&', message);
 			
-			item.setItemMeta(itemMeta);	
-			p.getInventory().getItemInMainHand().setItemMeta(itemMeta);
+			List<String> itemLore;
+			ItemStack item = p.getInventory().getItemInMainHand();
+			ItemMeta itemMeta = item.getItemMeta();
+			
+			//add to lore
+			if (args[0].EqualsIgnoreCase("add") {
+				if (itemMeta.haslore()) {
+					itemLore = itemMeta.getLore();
+				}
+				else {
+					itemLore = new ArrayList<String>();
+				}
+				itemLore.add(message);
+			}
+			//clear lore
+			else if (args[0].EqualsIgnoreCase("clear") {
+				itemLore = new ArrayList<String>();
+			}
+			//set a specific lore line
+			else if (StringUtils.isNumeric(args[0])){
+			}
+			else {
+				playmenu(p);
+				return true;
+			}
+			
+			itemMeta.setLore(itemLore);
+			item.setItemMeta(itemMeta);
 			
 			p.sendMessage(ChatColor.AQUA + "[FrostRenamer] " + ChatColor.GREEN + "Your Item description has been set to:  " + message);
 			return true;
 		}
-			
 		return true;
 	}
 
