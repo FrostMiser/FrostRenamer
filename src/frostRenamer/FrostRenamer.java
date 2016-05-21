@@ -118,6 +118,17 @@ public class FrostRenamer extends JavaPlugin {
 			}
 			//set a specific lore line
 			else if (StringUtils.isNumeric(args[0])){
+
+				if (itemMeta.haslore()) {
+					itemLore = itemMeta.getLore();
+				}
+				else {
+					itemLore = new ArrayList<String>();
+				}
+				while (itemLore.length() < Integer.parseInt(args[0]) {
+					itemLore.add("");
+				}
+				itemLore.set(Integer.parseInt(args[0])-1, message);
 			}
 			else {
 				playmenu(p);
