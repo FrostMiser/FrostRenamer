@@ -1,3 +1,5 @@
+![FrostRenamer](/FrostRenamer-Logo.png?raw=true "FrostRenamer")
+
 FrostRenamer
 ===========
 This is a Minecraft Bukkit plugin which allows you to rename items.  Color code support is included as well as a color code guide.                                                                                                                                 
