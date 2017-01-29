@@ -15,12 +15,9 @@ import org.bukkit.ChatColor;
 
 
 public class FrostRenamer extends JavaPlugin {
-
-	
 	public void onEnable() {
 		this.getServer().getConsoleSender().sendMessage(ChatColor.BLUE + "[FrostRenamer] Plugin Enabled.");
 		return;
-			
 	}
 
 	public void onDisable() {
@@ -86,8 +83,6 @@ public class FrostRenamer extends JavaPlugin {
 				playMenu(p);
 				return true;
 			}
-			
-			
 
 			String message = args[1];
 
