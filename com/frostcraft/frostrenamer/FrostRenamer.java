@@ -1,4 +1,4 @@
-package frostRenamer;
+package com.frostcraft.frostrenamer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +10,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
-
+import org.apache.commons.lang.StringUtils;
 import org.bukkit.ChatColor;
 
 
@@ -98,8 +98,8 @@ public class FrostRenamer extends JavaPlugin {
 			ItemMeta itemMeta = item.getItemMeta();
 			
 			//add to lore
-			if (args[0].EqualsIgnoreCase("add") {
-				if (itemMeta.haslore()) {
+			if (args[0].equalsIgnoreCase("add")) {
+				if (itemMeta.hasLore()) {
 					itemLore = itemMeta.getLore();
 				}
 				else {
@@ -108,25 +108,25 @@ public class FrostRenamer extends JavaPlugin {
 				itemLore.add(message);
 			}
 			//clear lore
-			else if (args[0].EqualsIgnoreCase("clear") {
+			else if (args[0].equalsIgnoreCase("clear")) {
 				itemLore = new ArrayList<String>();
 			}
 			//set a specific lore line
 			else if (StringUtils.isNumeric(args[0])){
 
-				if (itemMeta.haslore()) {
+				if (itemMeta.hasLore()) {
 					itemLore = itemMeta.getLore();
 				}
 				else {
 					itemLore = new ArrayList<String>();
 				}
-				while (itemLore.length() < Integer.parseInt(args[0]) {
+				while (itemLore.size() < Integer.parseInt(args[0])) {
 					itemLore.add("");
 				}
 				itemLore.set(Integer.parseInt(args[0])-1, message);
 			}
 			else {
-				playmenu(p);
+				playMenu(p);
 				return true;
 			}
 			
