@@ -1,4 +1,4 @@
-![FrostRenamer](/frostrenamer-Logo.png?raw=true "FrostRenamer")
+![FrostRenamer](/frostrenamer-logo.png?raw=true "FrostRenamer")
 
 FrostRenamer
 ===========
