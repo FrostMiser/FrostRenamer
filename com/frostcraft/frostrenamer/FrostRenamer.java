@@ -28,22 +28,22 @@ public class FrostRenamer extends JavaPlugin {
 		p.sendMessage(ChatColor.GOLD+ "                      FrostRenamer Menu");
 		p.sendMessage(ChatColor.GOLD + "You may use /Rename (name), or /describe (descrption) to rename or describe an item");				
 		p.sendMessage(ChatColor.BLUE + "=-=-=-=-=-=-=-=-=-=FrostCraft.com=-=-=-=-=-=-=-=-=-=-=");			
-		p.sendMessage(ChatColor.BLUE + "&0 - Black");
-		p.sendMessage(ChatColor.BLUE + "&1 - Dark Blue");
-		p.sendMessage(ChatColor.BLUE + "&2 - Dark Green");
-		p.sendMessage(ChatColor.BLUE + "&3 - Dark Aqua");
-		p.sendMessage(ChatColor.BLUE + "&4 - Dark Red");
-		p.sendMessage(ChatColor.BLUE + "&5 - Dark Purple");
-		p.sendMessage(ChatColor.BLUE + "&6 - Gold");
-		p.sendMessage(ChatColor.BLUE + "&7 - Gray");
-		p.sendMessage(ChatColor.BLUE + "&8 - Dark Gray");
+		p.sendMessage(ChatColor.BLACK + "&0 - Black");
+		p.sendMessage(ChatColor.DARK_BLUE + "&1 - Dark Blue");
+		p.sendMessage(ChatColor.DARK_GREEN + "&2 - Dark Green");
+		p.sendMessage(ChatColor.DARK_AQUA + "&3 - Dark Aqua");
+		p.sendMessage(ChatColor.DARK_RED + "&4 - Dark Red");
+		p.sendMessage(ChatColor.DARK_PURPLE + "&5 - Dark Purple");
+		p.sendMessage(ChatColor.GOLD + "&6 - Gold");
+		p.sendMessage(ChatColor.GRAY + "&7 - Gray");
+		p.sendMessage(ChatColor.DARK_GRAY + "&8 - Dark Gray");
 		p.sendMessage(ChatColor.BLUE + "&9 - Blue");
-		p.sendMessage(ChatColor.BLUE + "&a - Green");
-		p.sendMessage(ChatColor.BLUE + "&b - Aqua");
-		p.sendMessage(ChatColor.BLUE + "&c - Red");
-		p.sendMessage(ChatColor.BLUE + "&d - Light Purple");
-		p.sendMessage(ChatColor.BLUE + "&e- Yellow");
-		p.sendMessage(ChatColor.BLUE + "&f - White");
+		p.sendMessage(ChatColor.GREEN + "&a - Green");
+		p.sendMessage(ChatColor.AQUA + "&b - Aqua");
+		p.sendMessage(ChatColor.RED + "&c - Red");
+		p.sendMessage(ChatColor.LIGHT_PURPLE + "&d - Light Purple");
+		p.sendMessage(ChatColor.YELLOW + "&e- Yellow");
+		p.sendMessage(ChatColor.WHITE + "&f - White");
 	}	
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) 
